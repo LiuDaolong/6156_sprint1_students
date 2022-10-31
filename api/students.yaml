@@ -1,7 +1,7 @@
 ---
 swagger: "2.0"
 info:
-  version: "2022-10-30T00:00:43Z"
+  version: "2022-10-31T00:34:12Z"
   title: "6156_sprint1_students"
 host: "6zme60papb.execute-api.us-east-1.amazonaws.com"
 basePath: "/latest"
@@ -69,60 +69,6 @@ paths:
             Access-Control-Allow-Headers:
               type: "string"
   /students/{sid}:
-    get:
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "sid"
-        in: "path"
-        required: true
-        type: "string"
-      responses:
-        "200":
-          description: "200 response"
-          schema:
-            $ref: "#/definitions/Empty"
-          headers:
-            Access-Control-Allow-Origin:
-              type: "string"
-    post:
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "sid"
-        in: "path"
-        required: true
-        type: "string"
-      responses:
-        "200":
-          description: "200 response"
-          schema:
-            $ref: "#/definitions/Empty"
-          headers:
-            Access-Control-Allow-Origin:
-              type: "string"
-    delete:
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      parameters:
-      - name: "sid"
-        in: "path"
-        required: true
-        type: "string"
-      responses:
-        "200":
-          description: "200 response"
-          schema:
-            $ref: "#/definitions/Empty"
-          headers:
-            Access-Control-Allow-Origin:
-              type: "string"
     options:
       consumes:
       - "application/json"
@@ -145,6 +91,97 @@ paths:
               type: "string"
             Access-Control-Allow-Headers:
               type: "string"
+    x-amazon-apigateway-any-method:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "sid"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+  /students/{sid}/courses:
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "sid"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+    x-amazon-apigateway-any-method:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "sid"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+  /students/{sid}/projects:
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "sid"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+    x-amazon-apigateway-any-method:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "sid"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Empty"
 definitions:
   Empty:
     type: "object"
