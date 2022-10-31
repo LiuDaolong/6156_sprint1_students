@@ -5,6 +5,9 @@ microservice of students
 Daolong Liu
 Yuming Tian
 
+## Endpoint
+https://6zme60papb.execute-api.us-east-1.amazonaws.com/latest/students
+
 ## RESTful API
 - /students
   - GET: list all student ids in the database
